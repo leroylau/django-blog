@@ -1,5 +1,5 @@
 from flask import Flask
-from flaskr.blog import blog
+from flaskr.post import blog
 
 app = Flask(__name__)
 app.register_blueprint(blog)

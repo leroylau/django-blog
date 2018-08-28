@@ -1,10 +1,10 @@
 from flask import render_template, url_for
-from flaskr.blog import blog
+from flaskr.post import blog
 
 @blog.route('/')
 @blog.route('/index')
 def index():
-    return render_template('index.html')
+    return render_template('post/index.html')
 
 @blog.route('/<name>')
 def user(name):
@@ -18,4 +18,4 @@ def user(name):
             "body" : 'A trip to Japan.'
         }
     ]
-    return render_template('user.html', name=name, posts=posts)
+    return render_template('post/user.html', name=name, posts=posts)
