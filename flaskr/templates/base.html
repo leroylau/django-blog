@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% if name %}
+            <title>{{ name }} - Blog</title>
+        {% else %}
+            <title>Blogr</title>
+        {% endif %}
+    </head>
+    <body>
+        {% if name %}
+            <div>
+                <b>Hi {{ name }}</b>
+            </div>
+            <hr>
+        {% else %}
+            <b>Welcome to Blogr</b>
+            <hr>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
