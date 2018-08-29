@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        {% if name %}
-            <title>{{ name }} - Blog</title>
+        {% if user.name %}
+            <title>{{ user.name }} - Blog</title>
         {% else %}
             <title>Blogr</title>
         {% endif %}
     </head>
     <body>
-        {% if name %}
+        {% if user.name %}
             <div>
-                <b>Hi {{ name }}</b>
+                <b>Hi {{ user.name }}</b>
             </div>
             <hr>
         {% else %}

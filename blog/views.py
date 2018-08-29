@@ -8,7 +8,7 @@ def index():
 
 @app.route('/user')
 def user():
-    name = 'william'
+    user = {'name' : 'william'}
     posts = [
         {
             'name' : 'william',
@@ -19,7 +19,7 @@ def user():
             "body" : 'A trip to Japan.'
         }
     ]
-    return render_template('user.html', name=name, posts=posts)
+    return render_template('user.html', user=user, posts=posts)
 
 @app.route('/register')
 def register():

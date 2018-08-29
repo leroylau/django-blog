@@ -1,7 +1,17 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
 
-{% block content %}
-    {% for post in posts %}
+<head>
+
+    <title>{{ user.name }} - Blog</title>
+
+</head>
+
+<body>
+    <div>
+        <b>Hi {{ user.name }}</b>
+    </div>
+    <hr> {% for post in posts %}
     <ul>
         <li>
             <p>
@@ -10,4 +20,6 @@
         </li>
     </ul>
     {% endfor%}
-{% endblock %}
+</body>
+
+</html>
