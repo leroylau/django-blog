@@ -1,4 +1,4 @@
-from flask import render_template, request, flash
+from flask import render_template, request, flash, redirect, url_for
 
 from blog import app
 
@@ -6,7 +6,17 @@ from blog import app
 def index():
     return render_template('index.html')
 
-@app.route('/user')
+@app.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = int(request.form.get('pwd'))
+        print(username, password)
+    if username == '111' and password == 222:
+        return redirect(url_for('user'))
+    return render_template('login.html')
+
+@app.route('/blog')
 def user():
     user = {'name' : 'william'}
     posts = [
@@ -19,7 +29,7 @@ def user():
             "body" : 'A trip to Japan.'
         }
     ]
-    return render_template('user.html', user=user, posts=posts)
+    return render_template('blog.html', user=user, posts=posts)
 
 @app.route('/register')
 def register():
@@ -42,4 +52,4 @@ def regist():
 
     flash(error)
 
-    return f"welcome {username}!"
+    return f"welcome, {username}!"

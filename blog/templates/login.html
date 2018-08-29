@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blogr</title>
+</head>
+<body>
+    <h1 class="h3">Please Login</h1>
+    <form action="{{ url_for('login') }}" method="post">
+        <label for="inputUsername" class="sr-only">User Name</label>
+        <input name="username" class="form-control" placeholder="username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="pwd" class="form-control" placeholder="Password" required>
+        <button class="btn btn-primary" type="submit">Submmit</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+</body>
+</html>
