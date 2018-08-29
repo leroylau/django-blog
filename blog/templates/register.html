@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="{{ url_for('regist') }}" method="post">
+        <label for="inputUsername" class="sr-only">User Name</label>
+        <input name="username" class="form-control" placeholder="username" required autofocus>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input name="email" class="form-control" placeholder="Email" required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="pwd" class="form-control" placeholder="Password" required>
+        <button class="btn btn-primary" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+{% endblock %}
