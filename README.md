@@ -58,6 +58,8 @@ INSTALLED_APPS = [
 ## 其他配置项...
 ```
 
+可见除了新建的`myBlog`App外，Django还内置了`admin,auth,contenttypes,sessions,messages,staticfiles`等App，这样我们只需要关心业务代码即可。
+
 此时工程目录结构为：
 
 ```zsh
@@ -84,5 +86,4 @@ INSTALLED_APPS = [
         ├── tests.py
         └── views.py
 ```
-
 
