@@ -1,19 +1,22 @@
 # Django - Blog
 ---
 
-## Start project
+## Step - 1
+---
+
+### Start project
 
 ```python
 > django-admin startproject blog
 ```
 
-## Run server
+### Run server
 
 ```python
 > python3 manage.py runserver
 ```
 
-## Default language
+### Default language
 
 In `blog/blog/settings.py`, change the settings:
 
